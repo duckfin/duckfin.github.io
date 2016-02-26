@@ -1,0 +1,14 @@
+div {
+	display: inline;
+}
+div.button {
+	border: 1px solid black;
+	margin: 5px;
+}
+span.button {
+	margin: 5px;
+}
+
+span {
+	display: inline;
+}

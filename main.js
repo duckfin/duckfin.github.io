@@ -47,10 +47,9 @@ function miracle(what) {
 };
 
 window.setInterval(function(){
-	gain('stone',assignments["stone"].quant/20);
-	gain('wood',assignments["wood"].quant/20);
-	gain('worship',assignments["unem"].quant/360);
-	gain('research',assignments["elder"].quant/20);
+	for(var c=0;c<characters.length;c++){
+		characters[c].assign.tick(characters[c]);
+	}
 	if(characters.length<maxPop){
 		peopleParts+=(function (){
 			var t = 0;

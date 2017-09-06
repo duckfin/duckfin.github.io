@@ -5,6 +5,8 @@ for(n of resourceList) {
 };
 
 resources['worshipMax'] = 100;
+resources['woodMax'] = 50;
+resources['stoneMax'] = 50;
 resources['researchMax'] = 100;
 
 function totalResources() {

@@ -191,6 +191,7 @@ document.getElementById('stoneText').innerHTML = "Stone: " + (Math.floor(resourc
 			return out+")";
 		})();
 	};
+	document.getElementById('totalWorkerDisplay').innerHTML = " Total Population: "+characters.length.toString()+"/"+maxPop.toString();
 	var wps = (Math.floor(assignments["unem"].quant*4000.0/360)/1000)
 	document.getElementById('progressText').innerHTML = (Math.floor(resources['worship']*10)/10).toString()+" / "+Math.floor(resources['worshipMax']).toString()+'&nbsp;&nbsp;&nbsp;('+wps.toString()+'/sec)';
 	document.getElementById('progressFill').style.width = (Math.floor(resources['worship']*10000.0/resources['worshipMax'])/100).toString()+'%';

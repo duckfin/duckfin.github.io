@@ -12,8 +12,6 @@ for(var i=0;i<maxPop;i++) {
 function worshipAddCheck() {
 	if(resources["worship"]>=1) {
 		$('#miraclePanelSelect').css({"visibility":"visible","display":"inline"});
-		$('#miracleDestroyWoodDiv').css({"visibility":"visible","display":"inline"});
-		$('#miracleDestroyStoneDiv').css({"visibility":"visible","display":"inline"});
 		activity("Click the 'Miracle' pane to see available miracles.");
 		worshipAddCheck = worshipAddCheckFunctions.shift();
 	}

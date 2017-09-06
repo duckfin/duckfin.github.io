@@ -195,9 +195,6 @@ document.getElementById('stoneText').innerHTML = "Stone: " + (Math.floor(resourc
 	document.getElementById('progressText').innerHTML = (Math.floor(resources['worship']*10)/10).toString()+" / "+Math.floor(resources['worshipMax']).toString()+'&nbsp;&nbsp;&nbsp;('+wps.toString()+'/sec)';
 	document.getElementById('progressFill').style.width = (Math.floor(resources['worship']*10000.0/resources['worshipMax'])/100).toString()+'%';
 	
-	document.getElementById('storageText').innerHTML = "Storage: " + (Math.floor(totalResources()*10)/10).toString()+" / "+Math.floor(storageMax).toString();
-	document.getElementById('storageFill').style.width = (Math.floor(totalResources()*10000.0/storageMax)/100).toString()+'%';
-	
 	document.getElementById('discoveryText').innerHTML = "Discovery: " + (Math.floor(100*resources['research']/resources['researchMax'])).toString() + '%';
 	document.getElementById('discoveryFill').style.width = (Math.floor(resources['research']*10000.0/resources['researchMax'])/100).toString()+'%';
 	

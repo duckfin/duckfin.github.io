@@ -1,4 +1,4 @@
-var namearray = ["John","Paul","Sam","Andrew"]
+var namearray = ["John","Paul","Sam","Andrew","Alex","Craig","Gene","Steve","James"];
 
 function getID() {
 	for(var i=Math.floor(10000*Math.random()),t=0;t<10000;t++,i++){
@@ -15,6 +15,7 @@ function CHARACTER() {
 	this.xp = 0;
 	this.maxxp = 10;
 	this.age = 1;
+this.level = 0;
 	this.name = namearray[Math.floor(namearray.length*Math.random())];
 	this.id = getID();
 	this.assign = assignments["unem"];
@@ -23,8 +24,9 @@ function CHARACTER() {
 	for(n of ["stone","wood","unem","research"]) {
 		this.efficiency[n] = 0;
 	};
-	this.emotion = {faith:0.5,fear:0.25,happiness:0.75};
+	this.emotion = {faith:0.75,fear:0.25,happiness:0.75};
 	this.skillNodes = [];
+this.calcMaxXp = function(){return 10*Math.exp(2,this.level);};
 }
 
 var characters = new Array();

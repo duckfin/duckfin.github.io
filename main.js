@@ -44,12 +44,6 @@ function miracle(what) {
 	if(what == "wood" && resources["worship"]>=50 && storageMax-totalResources()>=10) {
 		resources["worship"] -= 50;
 		resources["wood"] += 10;
-	} else if(what == "destroyWood" && resources["worship"]>=2 && resources["wood"]>=10) {
-		resources["worship"] -= 2;
-		resources["wood"] -= 10;
-	} else if(what == "destroyStone" && resources["worship"]>=2 && resources["stone"]>=10) {
-		resources["worship"] -= 2;
-		resources["stone"] -= 10;
 	}
 	updateAll();
 };

@@ -159,9 +159,9 @@ building["stash"].stoneCost = 20;
 building["stash"].stoneMult = 1.6;
 building["stash"].woodCost = 10;
 building["stash"].woodMult = 1.4;
-building["stash"].onBuy = function() {storageMax += 20*(1+bonuses["storageMax"]);};
+building["stash"].onBuy = function() {resources['woodMax']+=25;resources['stoneMax']+=25;};
 building["stash"].onDestroy = function() {
-	storageMax -= 20*(1+bonuses["storageMax"]);};
+	resources['woodMax']-=25;resources['stoneMax']-=25;};
 building["stash"].triggerOnBuy = function () {
 	$('#elderhutBuildingDiv').css({"visibility":"visible","display":"inline"});
 	activity("Elder Huts allow the permanent assignment of Elders - those who lead your people to new discoveries.");

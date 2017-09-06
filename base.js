@@ -74,7 +74,7 @@ assignments["unem"] = (function () {
 	obj.plural = "Worshipers";
 	obj.what = "unem";
 	obj.tick = function (who) {
-		gain(this.what,1/360.0);
+		gain("worship",1/360.0);
 		return false;
 	};
 	return obj;

@@ -13,7 +13,7 @@ function DISCOVERY() {
 		}
 	}
 };
-
+var test = 0;
 var discoveries = new Array();
 
 discoveries["formalWorship"] = (function () {

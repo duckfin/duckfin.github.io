@@ -25,7 +25,8 @@ function ASSIGNMENT() {
 	this.max = -1;
 	this.quant = 0;
 	this.what = "";
-	this.tick = function () {
+	this.tick = function (who) {
+		gain(this.what,1/20.0);
 		return false;
 	};
 	this.assign = function (w) {
@@ -72,6 +73,10 @@ assignments["unem"] = (function () {
 	var obj = new ASSIGNMENT();
 	obj.plural = "Worshipers";
 	obj.what = "unem";
+	obj.tick = function (who) {
+		gain(this.what,1/360.0);
+		return false;
+	};
 	return obj;
 })();
 assignments["elder"] = (function () {

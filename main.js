@@ -20,9 +20,7 @@ function worshipAddCheck() {
 }
 
 function gain(what,amount){
-	if(what=="worship"){resources['worship'] = Math.min(resources['worship']+amount,resources['worshipMax']);worshipAddCheck();}
-	else if(what=="research"){resources['research']=Math.min(resources['research']+amount,resources['researchMax']);}
-	else {resources[what] += Math.min(amount,Math.max(storageMax-totalResources(),0));};
+	resources[what] = Math.min(resources[what]+amount,resources[what+'Max']);
 };
 
 function checkCostBuy(what) {

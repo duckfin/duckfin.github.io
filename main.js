@@ -147,7 +147,7 @@ function outputTimeTil(rps,target) {
 
 function updateAll(){
 
-document.getElementById('woodText').innerHTML = "Wood: " + (Math.floor(resources['wood']*10)/10).toString()+"/"+Math.floor(resources['woodMax']).toString()+'&nbsp;('+(Math.floor(characters.reduce(function(p,n){return (n.assign==assignments["wood"])?n.assign.calcTickGain(n):0},0))).toString()+'/sec)';
+document.getElementById('woodText').innerHTML = "Wood: " + (Math.floor(resources['wood']*10)/10).toString()+"/"+Math.floor(resources['woodMax']).toString()+'&nbsp;('+(Math.floor(characters.reduce(function(p,n){return (n.assign==assignments["wood"])?n.assign.calcTickGain(n):0},0)*40)/10).toString()+'/sec)';
 	document.getElementById('woodFill').style.width = (Math.floor(resources['wood']*10000.0/resources['woodMax'])/100).toString()+'%';
 
 document.getElementById('stoneText').innerHTML = "Stone: " + (Math.floor(resources['stone']*10)/10).toString()+"/"+Math.floor(resources['stoneMax']).toString()+'&nbsp;('+(Math.floor(assignments["stone"].quant*40.0/20)/10).toString()+'/sec)';

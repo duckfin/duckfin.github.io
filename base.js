@@ -147,7 +147,7 @@ building["tent"].triggerOnBuy = function () {
 	activity("You now have space for two more people, who will come to your faith over time.");
 	activity("Try assigning a few Miners and building a Stash.");
 	$('#stashBuildingDiv').css({"visibility":"visible","display":"inline"});
-	$('#stoneCurrencyDiv').css({"visibility":"visible","display":"inline"});
+	$('#stoneBar').css({"visibility":"visible","display":"inline-block"});
 	$('#stoneWorkerDiv').css({"visibility":"visible","display":"inline"});
 	building["tent"].triggerOnBuy = tentTriggerOnBuyFunctions.shift();
 };
